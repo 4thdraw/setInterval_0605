@@ -7,17 +7,16 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
         $(function(){
-            const bglist = ["pink","red","gray","green"];
-            let count = 0;  // 0,1,2,3
-            // bglist.length 는 숫자 4를 의미, 4로 나누었을때의 나머지를 구하는 연산자 %
+            const bglist = ["pink","yellow","gray","green"];
+            let count = 3;  
+           
            setInterval(function(){
              count++;
              count = count % bglist.length;
              $("body").css("background", bglist[count]);
-           }, 3000); // 3초뒤부터 3초마다 실행하겠다.
-            
-           $("body").css("background", bglist[count]); // 화면이 열리자마다 1회 실행
+           }, 3000);   
 
+           $("body").css("background", bglist[count]); // 초기 count값을 받도록 해준다. 
         })
     </script>
 </head>
